@@ -3,7 +3,7 @@ package box3d;
 import model.Box;
 
 public class BoxImpl implements BoxImplI{
-    private Box box;
+    private final Box box;
 
     public BoxImpl(Box box) {
         this.box = box;
@@ -11,11 +11,13 @@ public class BoxImpl implements BoxImplI{
 
     @Override
     public double getSurfaceArea() {
-        return (box.getLength()*box.getWidth());
+        return (2*(box.getLength()*box.getWidth()))
+                + (2*(box.getWidth()*box.getHeight()))
+                +(2*(box.getLength()*box.getHeight()));
     }
 
     @Override
     public double getVolume() {
-        return 0;
+        return box.getHeight()*box.getLength()*box.getWidth();
     }
 }
