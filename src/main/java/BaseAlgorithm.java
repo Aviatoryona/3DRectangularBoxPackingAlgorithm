@@ -5,7 +5,7 @@ import model.Box;
 import java.util.Map;
 
 public abstract class BaseAlgorithm implements AlgorithmI{
-    private final Map<Integer,Box> packingBoxes; // holds the number of difference sized boxes;
+    final Map<Integer,Box> packingBoxes; // holds the number of difference sized boxes;
     BoxImplI containerBoxImplI;
 
     public BaseAlgorithm(Box container, Map<Integer, Box> packingBoxes) {
