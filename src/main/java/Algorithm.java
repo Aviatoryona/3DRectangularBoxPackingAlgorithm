@@ -4,7 +4,7 @@ import java.util.Map;
 
 public class Algorithm extends BaseAlgorithm{
 
-    public Algorithm(Box container, Map<Integer, Box> packingBoxes) {
+     Algorithm(Box container, Map<Integer, Box> packingBoxes) {
         super(container, packingBoxes);
     }
 
@@ -15,4 +15,6 @@ public class Algorithm extends BaseAlgorithm{
                 "Volume of container : %s\n" +
                 "Wasted Space : %s\n",getNumBoxes(),getTotalPackingBoxVolume(),getContainerVolume(),getWastedSpace());
     }
+
+
 }
